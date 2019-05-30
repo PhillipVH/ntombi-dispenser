@@ -3,14 +3,14 @@ import React from 'react';
 class Display extends React.Component {
     render() {
         const remaining = this.props.capacity - this.props.dispensed;
-        const display_warning = remaining < 10;
+        const display_warning = remaining <= 10;
         const empty = remaining === 0;
         return (
             <div className="display">
-                Remaining: {remaining}
+                Remaining: <span className='remaining'>{remaining}</span>
                 <br/>
-                {display_warning && !empty ? "Warning: Refill soon!" : ""}
-                {empty ? "Warning: Empty!" : ""}
+                {display_warning && !empty ? <span className='warning'>Warning: Refill soon!</span> : ""}
+                {empty ? <span className='warning'>Warning: Empty!</span> : ''}
             </div>
         )
     }

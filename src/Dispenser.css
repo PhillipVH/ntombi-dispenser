@@ -5,10 +5,26 @@
 
 .dispenser > div {
   background-color: bisque;
+  text-align: center;
+}
+
+.button-label {
+  font-size: 3em;
+  font-weight: bold;
 }
 
 .display {
+  /* padding: 2em; */
   padding: 2em;
+  font-size: 2em;
+}
+
+.remaining {
+  font-weight: bold;
+}
+
+.warning {
+  color: red;
 }
 
 .button {
